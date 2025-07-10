@@ -151,5 +151,86 @@ class Misc(commands.Cog):
 
         await channel.send(message)
 
+    # My custom commands
+    @commands.command(name="besthost")
+    async def besthost(self, ctx):
+        server_config = self.bot.config
+        server_id = str(ctx.guild.id)
+
+        if server_id not in server_config:
+            await ctx.send("Server configuration not found.")
+            return
+
+        if 'host_role' not in server_config[server_id]:
+            await ctx.send("Host role not set for this server. Please configure them first.")
+            return
+
+        host_role_id = server_config[server_id]['host_role']
+
+        host_role = discord.utils.get(ctx.guild.roles, id=host_role_id)
+        if host_role is None:
+            await ctx.send("Host role not found.")
+            return
+
+        hosts = [member for member in ctx.guild.members if host_role in member.roles]
+        result = random.randint(0,len(hosts)-1)
+        await ctx.send(f"Not {hosts[result]}.")
+        return
+
+    @commands.command(name="worsthost")
+    async def besthost(self, ctx):
+        server_config = self.bot.config
+        server_id = str(ctx.guild.id)
+
+        if server_id not in server_config:
+            await ctx.send("Server configuration not found.")
+            return
+
+        if 'host_role' not in server_config[server_id]:
+            await ctx.send("Host role not set for this server. Please configure them first.")
+            return
+
+        host_role_id = server_config[server_id]['host_role']
+
+        host_role = discord.utils.get(ctx.guild.roles, id=host_role_id)
+        if host_role is None:
+            await ctx.send("Host role not found.")
+            return
+
+        hosts = [member for member in ctx.guild.members if host_role in member.roles]
+        result = random.randint(0,len(hosts)-1)
+        await ctx.send(f"{hosts[result]}.")
+        return
+
+    @commands.command(name="bestplayer")
+    async def besthost(self, ctx):
+        server_config = self.bot.config
+        server_id = str(ctx.guild.id)
+
+        if server_id not in server_config:
+            await ctx.send("Server configuration not found.")
+            return
+
+        if 'player_role' not in server_config[server_id]:
+            await ctx.send("Player role not set for this server. Please configure them first.")
+            return
+
+        player_role_id = server_config[server_id]['player_role']
+
+        player_role = discord.utils.get(ctx.guild.roles, id=player_role_id)
+        if player_role is None:
+            await ctx.send("Player role not found.")
+            return
+
+        players = [member for member in ctx.guild.members if player_role in member.roles]
+
+        if not players:
+            await ctx.send("No one.")
+            return
+        
+        result = random.randint(0,len(players)-1)
+        await ctx.send(f"{players[result]}.")
+        return
+
 async def setup(bot):
     await bot.add_cog(Misc(bot))

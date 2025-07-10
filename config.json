@@ -177,5 +177,14 @@
         "player_role": 1390945030650200064,
         "spectator_role": 1390945166340132886,
         "eliminated_role": 1390944616894828646
+    },
+    "1309297944050270218": {
+        "server_name": "Everyone is Elite Redux Pokémon Pokémon",
+        "host_role": 1309298163563102218,
+        "player_role": 1309298594645282846,
+        "spectator_role": 1309298594804797481,
+        "eliminated_role": 1310211158711734323,
+        "bot_role": 1309298492862365787,
+        "category_id": 1355958331147161751
     }
 }
