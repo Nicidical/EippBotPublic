@@ -76,7 +76,7 @@ async def on_ready():
 
     channel = client.get_channel(CHANNEL_ID)
     if channel:
-        await channel.send(f'EippBot is now online! Or am I?')
+        await channel.send(f'EiERPPBot is now online!')
     else:
         print(f"❗ Could not find the channel with ID {CHANNEL_ID}.")
 
