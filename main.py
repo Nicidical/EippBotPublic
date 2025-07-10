@@ -54,7 +54,8 @@ with open('config.json', 'r') as f:
     config = json.load(f)
 client.config = config
 
-OWNER_ID = 922921889347817483 
+OWNER_ID = 906931274587988059
+CHANNEL_ID = 1392752732238254191
 
 async def is_owner(ctx):
     return ctx.author.id == OWNER_ID
@@ -73,16 +74,16 @@ async def on_ready():
     await client.load_extension("birthday")
     print(f'Logged in as {client.user}')
 
-    channel = client.get_channel(1358470170191986842)
+    channel = client.get_channel(CHANNEL_ID)
     if channel:
         await channel.send(f'EippBot is now online! Or am I?')
     else:
-        print("❗ Could not find the channel with ID 1358470170191986842.")
+        print(f"❗ Could not find the channel with ID {CHANNEL_ID}.")
 
 @client.command()
 @commands.is_owner() 
 async def shutdown(ctx):
-    channel = client.get_channel(1358470170191986842)
+    channel = client.get_channel(CHANNEL_ID)
     if channel:
         await channel.send("EippBot shutting down...")
     await client.close()
@@ -90,7 +91,7 @@ async def shutdown(ctx):
 
 @client.command(name='invite')
 async def invite(ctx):
-    invite_url = "https://discord.com/oauth2/authorize?client_id=1298720832075464794&permissions=8&integration_type=0&scope=bot"
+    invite_url = "https://discord.com/oauth2/authorize?client_id=1344585204127498271&permissions=8&integration_type=0&scope=bot"
     
     embed = discord.Embed(
         title="Invite Me!",
