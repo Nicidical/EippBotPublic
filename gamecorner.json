@@ -2,8 +2,8 @@
     {
         "user_id": "922921889347817483",
         "username": "sylvieonmtf",
-        "coins": 1645,
-        "level": 1
+        "coins": 1693,
+        "level": 2
     },
     {
         "user_id": "832754898176049162",
@@ -128,7 +128,19 @@
     {
         "user_id": "1174342568750895125",
         "username": "rav3nclaw101",
-        "coins": 24,
-        "level": 2
+        "coins": 42,
+        "level": 1
+    },
+    {
+        "user_id": "983314029487464458",
+        "username": "tail_glow",
+        "coins": 2,
+        "level": 1
+    },
+    {
+        "user_id": "1147715219183915039",
+        "username": "3.141592650871",
+        "coins": 12,
+        "level": 1
     }
 ]
