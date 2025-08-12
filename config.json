@@ -186,5 +186,14 @@
         "eliminated_role": 1310211158711734323,
         "bot_role": 1309298492862365787,
         "category_id": 1355958331147161751
+    },
+    "1404349292298108958": {
+        "server_name": "Everyone is Super Mario Mon",
+        "host_role": 1404352640346886225,
+        "player_role": 1404352640514654290,
+        "spectator_role": 1404352641223491636,
+        "eliminated_role": 1404352642393702501,
+        "bot_role": 1404352642997551194,
+        "category_id": 1404352659020058656
     }
 }
